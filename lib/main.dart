@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/widgets/pages/category_meals_page.dart';
-import 'package:meal_app/widgets/pages/category_page.dart';
+import 'package:meal_app/widgets/pages/tab_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        primaryColor: Colors.pink,
+          colorScheme: ColorScheme.fromSwatch(
+            primarySwatch: Colors.pink,
+            accentColor: Colors.amber,
+          ),
           textTheme: const TextTheme(
           headline1: TextStyle(
             fontWeight: FontWeight.w400,
@@ -33,7 +37,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const CategoryPage(),
+        '/': (context) => const TabPage(),
         CategoryMealsPage.route : (context) => const CategoryMealsPage(),
       },
     );

@@ -19,7 +19,7 @@ class MockData {
           id: '01',
           title: 'Спагетти с томатным соусом',
           imageURL:
-              'https://kartinkin.net/uploads/posts/2021-07/1625183698_26-kartinkin-com-p-pasta-boloneze-yeda-krasivo-foto-33.jpg',
+              'https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/120213182322/120213182408/p_O.jpg',
           ingredients: [
             '4 томата',
             'столовая ложка оливкового масла',
