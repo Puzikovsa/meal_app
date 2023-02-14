@@ -32,7 +32,8 @@ class _TabPageState extends State<TabPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_pages[_selectedPageIndex]['title'] as String),
+        title: Text(_pages[_selectedPageIndex]['title'] as String,
+        style: Theme.of(context).textTheme.headline1,),
       ),
       body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
@@ -40,6 +41,7 @@ class _TabPageState extends State<TabPage> {
         backgroundColor: Theme.of(context).primaryColor,
         unselectedItemColor: Colors.white,
         selectedItemColor: Theme.of(context).colorScheme.secondary,
+        currentIndex: _selectedPageIndex,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
