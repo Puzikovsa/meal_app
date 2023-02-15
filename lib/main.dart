@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/widgets/pages/category_meals_page.dart';
+import 'package:meal_app/widgets/pages/filter_page.dart';
 import 'package:meal_app/widgets/pages/tab_page.dart';
 
 void main() {
@@ -33,12 +34,17 @@ class MyApp extends StatelessWidget {
                 fontSize: 18,
                 color: Colors.white,
             ),
-        )
+            headline4: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+            ),
+        ),
       ),
       initialRoute: '/',
       routes: {
         '/': (context) => const TabPage(),
         CategoryMealsPage.route : (context) => const CategoryMealsPage(),
+        FilterPage.route: (context) => const FilterPage(),
       },
     );
   }

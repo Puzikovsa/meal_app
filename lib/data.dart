@@ -4,34 +4,11 @@ import 'models/meal.dart';
 
 class MockData {
 
-  static final List<Meal> _favouriteMeals = [
-    Meal(
-      id: '01',
-      title: 'Спагетти с томатным соусом',
-      imageURL:
-      'https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/120213182322/120213182408/p_O.jpg',
-      ingredients: [
-        '4 томата',
-        'столовая ложка оливкового масла',
-        '1 луковица',
-        '250 грамм спагетти',
-        'специи'
-      ],
-      steps: [],
-      duration: 20,
-      complexity: Complexity.simple,
-      availability: Availability.affordable,
-      isGlutenFree: false,
-      isLactoseFree: false,
-      isVegetarian: true,
-      isVegan: true,
-      categories: [
-        '02',
-        '01',
-        '05'
-      ],
-    ),
-  ];
+  static final List<Meal> _favouriteMeals = [];
+  static bool isGlutenFree = false;
+  static bool isLactoseFree = false;
+  static bool isVegetarian = false;
+  static bool isVegan = false;
 
   static List<Category> get getCategories => [
         const Category(id: '01', title: 'Легкая', color: Colors.green),

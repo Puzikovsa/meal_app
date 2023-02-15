@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_app/widgets/pages/filter_page.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -33,7 +34,9 @@ class MainDrawer extends StatelessWidget {
             buildListTile('Блюдо', Icons.restaurant, () {
               Navigator.pushNamed(context, '/');
             }),
-            buildListTile('Настройки', Icons.settings, () {}),
+            buildListTile('Настройки', Icons.settings, () {
+              Navigator.pushNamed(context, FilterPage.route);
+            }),
           ],
         ),
       ),
