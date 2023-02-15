@@ -3,6 +3,9 @@ import 'models/category.dart';
 import 'models/meal.dart';
 
 class MockData {
+
+  static final List<Meal> _favouriteMeals = [];
+
   static List<Category> get getCategories => [
         const Category(id: '01', title: 'Легкая', color: Colors.green),
         const Category(id: '02', title: 'Итальянская', color: Colors.lime),
@@ -66,4 +69,8 @@ class MockData {
           '04',
         ])
       ];
+
+  static List<Meal> get favouriteMeals => _favouriteMeals;
+
+
 }

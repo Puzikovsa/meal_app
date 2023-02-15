@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/widgets/pages/category_page.dart';
 
+import 'favourite_meals_page.dart';
+
 class TabPage extends StatefulWidget {
   const TabPage({super.key});
 
@@ -16,11 +18,11 @@ class _TabPageState extends State<TabPage> {
   void initState() {
     _pages = [
       {
-        'page': CategoryPage(),
+        'page': const CategoryPage(),
         'title': 'Категории',
       },
       {
-        'page': CategoryPage(),
+        'page': const FavouriteMealsPage(),
         'title': 'Избранное',
       },
     ];
