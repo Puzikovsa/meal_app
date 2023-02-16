@@ -100,6 +100,7 @@ class FilterPageState extends State<FilterPage> {
       bool parameter,
       void Function(bool) tapHandler) {
     return SwitchListTile(
+      activeColor: Colors.pink,
       value: parameter,
       onChanged: tapHandler,
       title: Text(title),

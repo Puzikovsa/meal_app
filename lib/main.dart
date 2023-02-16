@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.pink,
           colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.pink,
-            accentColor: Colors.amber,
+          primarySwatch: Colors.pink,
+          accentColor: Colors.amber,
           ),
           textTheme: const TextTheme(
           headline1: TextStyle(
