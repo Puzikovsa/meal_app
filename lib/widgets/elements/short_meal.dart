@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/models/meal.dart';
+import 'package:meal_app/widgets/pages/meal_detail_page.dart';
 
 class ShortMeal extends StatelessWidget {
   final Meal meal;
+  late final BuildContext context;
 
-  const ShortMeal({super.key, required this.meal});
+  ShortMeal({super.key, required this.meal});
 
   @override
   Widget build(BuildContext context) {
+    this.context = context;
     return InkWell(
-      onTap: switchToMeal(),
+      onTap: switchToMeal,
       borderRadius: BorderRadius.circular(15),
       child: Card(
         elevation: 5,
@@ -96,5 +99,7 @@ class ShortMeal extends StatelessWidget {
     );
   }
 
-  switchToMeal() {}
+  void switchToMeal() {
+    Navigator.of(context).pushNamed(MealDetailPage.route, arguments: meal);
+  }
 }

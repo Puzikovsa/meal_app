@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/data.dart';
+import 'package:meal_app/widgets/pages/main_drawer.dart';
 
 class FilterPage extends StatefulWidget {
   static const String route = '/filters';
@@ -20,6 +21,7 @@ class FilterPageState extends State<FilterPage> {
           style: Theme.of(context).textTheme.headline1,
         ),
       ),
+      drawer: const MainDrawer(),
       body: Column(
         children: [
           Container(
